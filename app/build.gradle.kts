@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.kotlin.kapt)
     alias(libs.plugins.dagger.hilt)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
@@ -20,7 +21,6 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
-
         buildConfigField(
             "String",
             "NEWS_API_KEY",
@@ -110,4 +110,7 @@ dependencies {
 
     //Datastore
     implementation(libs.androidx.datastore.preferences)
+
+    // Kotlin Serialization
+    implementation(libs.kotlinx.serialization.json)
 }
